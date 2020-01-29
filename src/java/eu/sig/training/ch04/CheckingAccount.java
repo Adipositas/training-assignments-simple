@@ -1,7 +1,6 @@
 package eu.sig.training.ch04;
 
 
-// tag::CheckingAccount[]
 public class CheckingAccount extends Account {
     private int transferLimit = 100;
 
@@ -15,6 +14,7 @@ public class CheckingAccount extends Account {
 		}
 	}
 
+
     public void addInterest() {
         Money interest = balance.multiply(INTEREST_PERCENTAGE);
         if (interest.greaterThan(0)) {
@@ -24,4 +24,3 @@ public class CheckingAccount extends Account {
         }
     }
 }
-// end::CheckingAccount[]

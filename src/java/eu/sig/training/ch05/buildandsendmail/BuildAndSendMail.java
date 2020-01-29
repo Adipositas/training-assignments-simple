@@ -28,13 +28,11 @@ public class MailBody() {
 }
 
 public class BuildAndSendMail {
-    // tag::buildAndSendMail[]
     public void buildAndSendMail(MailMan m, MailAddress mailAddress, MailBody mailBody) {
        Mail mail = Mail(mailAddress, mailBody);
         
         m.send(mail);
     }
-    // end::buildAndSendMail[]
 
     @SuppressWarnings("unused")
     private MailMessage formatMessage(MailFont font, String string) {

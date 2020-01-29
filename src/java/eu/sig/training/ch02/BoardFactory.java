@@ -1,11 +1,9 @@
 package eu.sig.training.ch02;
 
 public class BoardFactory {
-    // tag::createBoard[]
     public Board createBoard(Square[][] grid) {
 		return new BoardCreator(grid).Create();
     }
-    // end::createBoard[]
 }
 
 class BoardCreator {
