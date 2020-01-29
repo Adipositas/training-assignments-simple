@@ -3,6 +3,24 @@ package eu.sig.training.ch05.boardpanel;
 import java.awt.Graphics;
 import java.util.List;
 
+class Point() {
+	public int x;
+	public int y;
+	public void Point(int x, int y){
+		this.x = x;
+		this.y = y;
+	}
+}
+
+class SquareSize() {
+	public int w;
+	public int h;
+	public void SquareSize(int w, int h) {
+		this.w = w;
+		this.h = h;
+	}
+}
+
 public class BoardPanel {
     @SuppressWarnings("unused")
     // tag::render[]
@@ -23,17 +41,17 @@ public class BoardPanel {
      * @param h
      *            The height of this square (in pixels).
      */
-    private void render(Square square, Graphics g, int x, int y, int w, int h) {
-        square.getSprite().draw(g, x, y, w, h);
+    private void render(Square square, Graphics g, Point point, SquareSize squareSize) {
+        square.getSprite().draw(g, point, squareSize);
         for (Unit unit : square.getOccupants()) {
-            unit.getSprite().draw(g, x, y, w, h);
+            unit.getSprite().draw(g, point, squareSize);
         }
     }
     // end::render[]
 
     private class Sprite {
         @SuppressWarnings("unused")
-        public void draw(Graphics g, int x, int y, int w, int h) {
+        public void draw(Graphics g, Point point, SquareSize squareSize) {
 
         }
     }
