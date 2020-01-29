@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=BoardFactory
+comment1.params=grid
+comment1.target=Board\ createBoard(Square[][])
+numComments=2
